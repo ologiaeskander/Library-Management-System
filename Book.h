@@ -1,10 +1,8 @@
 #pragma once
 #include <string>
-#include "Library.h"
-#include "Reader.h"
 using namespace std;
 
-class Book : public Library
+class Book
 {
 	string isbn; //basically an ID
 	string title;
@@ -14,13 +12,6 @@ class Book : public Library
 	float price;
 	int copies; //number of  copies
 	int available; //number of available copies
-	int n; //borrower number n
-	//struct borrowInfo 
-	//{ 
-	//	Reader borrower;  date borrowDate;
-	//	borrowInfo(){}
-	//};
-	//borrowInfo borrowHistory[50]; //assuming the history gets archived every 50 for simplicity's sake
 public:
 	Book() { copies = 1; available = 1; }
 	Book(string isbn, string title, string author, string publisher, int year, float price);
@@ -31,7 +22,7 @@ public:
 	void set_author(string a) { author = a; }
 	void set_publisher(string p) { publisher = p; }
 	void set_year(int y) { year = y; }
-	void set_price(int p) { price = p; }
+	void set_price(float p) { price = p; }
 	void add_copy() { copies++; available++; }
 	void add_copies(int n) { copies += n; available += n; }
 

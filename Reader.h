@@ -1,11 +1,10 @@
 #pragma once
 #include <string>
-#include "Library.h"
 #include "User.h"
 #include "Book.h"
 using namespace std;
 
-class Reader : public User, Library
+class Reader : public User
 {
 public:
 	Reader() {}

@@ -1,10 +1,9 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "Library.h"
 using namespace std;
 
-class User : public Library
+class User
 {
 protected:
 	string name;

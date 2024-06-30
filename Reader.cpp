@@ -3,8 +3,9 @@ bool Reader::borrow_book(Book b)
 {
 	if (!b.available)
 		return 0;
+	
 	b.available--;
-	//b.borrowHistory[++b.n] = {this, today};
+	return 1;
 }
 void Reader::return_book(Book b)
 {
